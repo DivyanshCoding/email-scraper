@@ -15,7 +15,7 @@ count = 0
 try:
     while len(urls):
         count +=1
-        if count == 10:
+        if count == 100:
             break
         url = urls.popleft()
         scraped_urls.add(url)
@@ -32,7 +32,7 @@ try:
         except (requests.exceptions.MissingSchema, requests.exceptions.ConnectionError):
             continue
 
-        new_emails = set(re.findall(r"[a-z0-9\.\-+_]+@a-z0-9\.\-+_]+\.[a-z]+",response.text,re.I))
+        new_emails = set(re.findall(r"[a-zA-Z0-9+._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+",response.text,re.I))
         emails.update(new_emails)
 
         soup =  BeautifulSoup(response.text , features='lxml')

@@ -1,0 +1,5 @@
+The number of email scraped depends on the regex search . The better it is , the more you can find.
+
+Some links
+https://stackoverflow.com/questions/42407785/regex-extract-email-from-strings
+https://www.geeksforgeeks.org/extracting-email-addresses-using-regular-expressions-python/
